@@ -5,14 +5,14 @@ from langchain.llms import CTransformers
     #among them popular ones like Llama, GPT4All-J, MPT, and Falcon.
 #C Transformers is the Python library that provides bindings for transformer models implemented in C/C++ using the GGML library
 
-## Function To get response from LLAma 2 model
+## Function To get response from LLAma  model
 
 def getLLamaresponse(input_text,no_words,blog_style):
 
     ### LLama2 model
-    llm=CTransformers(model='models/llama-2-7b-chat.ggmlv3.q8_0.bin',
+    llm=CTransformers(model='models/tinyllama-1.1b-chat-v1.0.Q4_0.gguf',
                       model_type='llama',
-                      config={'max_new_tokens':256,
+                      config={'max_new_tokens':128,
                               'temperature':0.01})
     
     ## Prompt Template
